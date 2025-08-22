@@ -1,0 +1,45 @@
+body{
+  font-family: "Outfit", sans-serif;
+}
+#auth{
+  background-image: url('../src/assets/authImage.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#hero{
+  background-image: url('../src/assets/BetaHero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -3;
+}
+.underlay{
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -3;
+}
+input::placeholder{
+  color: gray;
+}
+input:focus{
+  outline: none;
+}
+#propButton{
+  border-radius: 0px 5px 5px 0px;
+}
+.slick-slide > div {
+  margin: 0 10px;
+}
+.imgOverlay{
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    backdrop-filter: blur(3px);
+    mask-image: -webkit-linear-gradient(black, rgba(165, 42, 42, 0.7));
+}

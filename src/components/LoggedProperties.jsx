@@ -13,7 +13,7 @@ const LoggedProperties = () => {
     useEffect(()=>{
         const getProperties = async () => {
             const response = await axios.get(
-                `http://localhost:8170/api/v1/properties/all`,
+                `https://betaproperties.onrender.com/api/v1/properties/all`,
                 {headers: {
                     Authorization: `Bearer ${token}`
                 }}

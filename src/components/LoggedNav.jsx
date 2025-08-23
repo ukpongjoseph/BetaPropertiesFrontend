@@ -143,8 +143,8 @@ const NavHero = () => {
                     <p className='md:w-[60%] mx-auto lg:w-[40%] lg:text-lg'>Find your perfect home among our curated properties. Start browsing now!</p>
                 </div>
                 {/* form part */}
-                <form onSubmit={handleSubmit} className='flex flex-row p-3 underlay rounded-md my-10 text-sm lg:w-[80%] mx-auto mb-5'>
-                    <div className='flex flex-col md:flex-row rounded-md bg-white px-1 md:px-7 md:w-[75%] justify-between py-2'>
+                <form onSubmit={handleSubmit} className='flex flex-col md:flex-row p-3 underlay rounded-md my-10 text-sm lg:w-[80%] mx-auto mb-5'>
+                    <div className='flex flex-col md:flex-row md:rounded-md bg-white px-1 md:px-7 md:w-[75%] justify-between py-2'>
                         {/* location */}
                         <div className='flex flex-col p-1 border-b-2 md:border-b-0 md:border-r-2 border-gray-200'>
                             <label htmlFor="city">LOCATION</label>

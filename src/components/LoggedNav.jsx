@@ -168,7 +168,7 @@ const NavHero = () => {
                     <div className='md:flex md:w-[25%] hidden'>
                         <button className='bg-[rgba(61,153,112,1)] text-white md:px-3 py-2 rounded-md md:w-[100%]'>Find Property</button>
                     </div>
-                    <button id='propButton' className='block md:hidden bg-[rgba(61,153,112,1)] text-white'>Find Property</button>
+                    <button id='propButton' className='block md:hidden bg-[rgba(61,153,112,1)] text-white py-2'>Find Property</button>
                 </form>
             </div>
         </div>

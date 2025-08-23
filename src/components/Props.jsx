@@ -48,7 +48,7 @@ const Props = ({propertyName, town, city, price, noOfBedrooms, noOfBathrooms, pr
                         </div>
                         {/* bathrooms */}
                         <div className='flex gap-1'>
-  <                         span><img src={bathroom} alt="" /></span>
+                            <span><img src={bathroom} alt="" /></span>
                             <p>{noOfBathrooms} Bathrooms</p>
                         </div>
                     </div>

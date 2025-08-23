@@ -32,21 +32,31 @@ const NavHero = () => {
         logOut()
         nav('/signIn')
     }
-    const [formData, setFormData] = useState('')
+    const [formData, setFormData] = useState({
+        city : "",
+        propertyType : ""
+    })
     const handleChange = (e) => {
-        setFormData(e.target.value)
+        const {name, value} = e.target
+        setFormData({...formData, [name]:value})
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
+            let params = {}
+            if(formData.city)params.city = formData.city
+            if(formData.propertyType)params.propertyType = formData.propertyType
+            if(count > 1)params.noOfBedrooms = count
             const response = await axios.get(
-                `https://betaproperties.onrender.com/api/v1/properties/search?keyword=${formData}`,
-                 {headers: {
-                    Authorization: `Bearer ${token}`
-                }}
+                `https://betaproperties.onrender.com/api/v1/properties/search`,
+                {headers: {Authorization: `Bearer ${token}`}, params},
             )
             if(response.status === 200){
-                setFormData('')
+                setFormData({
+                    city : "",
+                    propertyType : ""
+                })
+                setCount(0)
                 setSearchData(response.data.properties)
                 setIsfound(true)
             }
@@ -124,13 +134,13 @@ const NavHero = () => {
                     <div className='flex flex-col md:flex-row rounded-md bg-white px-1 md:px-7 md:w-[75%] justify-between py-2'>
                         {/* location */}
                         <div className='flex flex-col p-1 border-b-2 md:border-b-0 md:border-r-2 border-gray-200'>
-                            <label htmlFor="propertyLocation">LOCATION</label>
-                            <input  type="text" placeholder='e.g Gbagada' name='propertyLocation' id='propertyLocation' value={formData.propertyLocation} onChange={handleChange}/>
+                            <label htmlFor="city">LOCATION</label>
+                            <input  type="text" placeholder='e.g Gbagada' name='city' id='city' value={formData.city} onChange={handleChange}/>
                         </div>
                         {/* property type */}
                         <div className='flex flex-col p-1 border-b-2 md:border-b-0 md:border-r-2 border-gray-200'>
-                            <label htmlFor="type">PROPERTY TYPE</label>
-                            <input type="text" placeholder='e.g Duplex, Bedroom Flat'/>
+                            <label htmlFor="propertyType">PROPERTY TYPE</label>
+                            <input type="text" id='propertyType' name='propertyType' placeholder='e.g Sale or Rent' value={formData.propertyType} onChange={handleChange}/>
                         </div>
                         {/* bedroom */}
                         <div className='flex flex-col p-1'>

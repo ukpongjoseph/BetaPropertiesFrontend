@@ -9,13 +9,19 @@ import downCaret from '../assets/Vector.png'
 import axios from 'axios'
 
 const NavHero = () => {
+    // useNavigate to navigate to other routes
     const nav = useNavigate()
+    // context
     const {user, logOut,token, setSearchData, setIsfound} = useAuthContext()
+    // array of links, necessary for border bottom styling
     const links = ["Home", "Properties", "About Us", "Blog", "Contact Us"]
+    // state to manage logout on larger screen
     const [deskLogOut, setDeskLogOut] = useState(false)
+    // function to display log out button for larger screen
     const switchLog = () => {
         setDeskLogOut(deskLogOut?false:true)
     }
+    // state to monitor the active link
     const [activeLink, setActiveLink] = useState(1)
     const [isOpen, setIsOpen] = useState(false)
     const switchOpen = () => {
@@ -28,27 +34,34 @@ const NavHero = () => {
     const decCount = () => {
         if(count > 0)setCount(count - 1)
     }
+    // log out function
     const exit = () => {
         logOut()
         nav('/signIn')
     }
+    // data for search
     const [formData, setFormData] = useState({
         city : "",
         propertyType : ""
     })
+    // function to handle input fields
     const handleChange = (e) => {
         const {name, value} = e.target
         setFormData({...formData, [name]:value})
     }
+    // submit function
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
+            // object to hold search parameters
             let params = {}
+            // for each available search parameter, add it to the search parameter object
             if(formData.city)params.city = formData.city
             if(formData.propertyType)params.propertyType = formData.propertyType
             if(count > 1)params.noOfBedrooms = count
             const response = await axios.get(
                 `https://betaproperties.onrender.com/api/v1/properties/search`,
+                // search param object is passed to header immediately after the authorization and bearer
                 {headers: {Authorization: `Bearer ${token}`}, params},
             )
             if(response.status === 200){

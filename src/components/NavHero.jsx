@@ -70,8 +70,8 @@ const NavHero = () => {
                     <p className='md:w-[60%] mx-auto lg:w-[40%] lg:text-lg'>Find your perfect home among our curated properties. Start browsing now!</p>
                 </div>
                 {/* form part */}
-                <div className='flex flex-row p-3 underlay rounded-md my-10 text-sm lg:w-[80%] mx-auto mb-5'>
-                    <div className='flex flex-col md:flex-row rounded-md bg-white px-1 md:px-7 md:w-[75%] justify-between py-2'>
+                <div className='flex flex-col md:flex-row p-3 underlay rounded-md my-10 text-sm lg:w-[80%] mx-auto mb-5'>
+                    <div className='flex flex-col md:flex-row md:rounded-md bg-white px-1 md:px-7 md:w-[75%] justify-between py-2'>
                         {/* location */}
                         <div className='flex flex-col p-1 border-b-2 md:border-b-0 md:border-r-2 border-gray-200'>
                             <label htmlFor="location">LOCATION</label>
@@ -95,7 +95,7 @@ const NavHero = () => {
                     <div className='md:flex md:w-[25%] hidden'>
                         <button disabled={true} className='bg-[rgba(61,153,112,1)] text-white md:px-3 py-2 rounded-md md:w-[100%] cursor-not-allowed'>Find Property</button>
                     </div>
-                    <button id='propButton' className='block md:hidden bg-[rgba(61,153,112,1)] text-white'>Find Property</button>
+                    <button id='propButton' className='block md:hidden bg-[rgba(61,153,112,1)] text-white py-3'>Find Property</button>
                 </div>
             </div>
         </div>

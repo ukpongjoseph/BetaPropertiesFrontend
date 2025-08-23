@@ -48,7 +48,7 @@ const NavHero = () => {
                 <button onClick={switchOpen} className='md:hidden text-white'><SquareMenu /></button>
             </div>
             {
-                isOpen && <div className='flex flex-col text-white gap-2 absolute top-15 left-[30px] z-1 bg-[rgba(3,90,51,1)] w-[80%] mx-auto rounded-md px-2 py-3 text-center'>
+                isOpen && <div className='flex flex-col text-white gap-2 absolute top-15 left-[10%] z-1 bg-[rgba(3,90,51,1)] w-[80%] mx-auto rounded-md px-2 py-3 text-center'>
                     <div className='flex flex-col gap-1'>
                         <a className='cursor-not-allowed' href="#">Home</a>
                         <a className='cursor-not-allowed' href="#">Properties</a>
@@ -57,8 +57,8 @@ const NavHero = () => {
                         <a className='cursor-not-allowed' href="#">Contact Us</a>
                     </div>
                     <div className='flex flex-col gap-1'>
-                        <Link to='/signIn'><button className='px-3 py-1 rounded-md border border-white'>Sign In</button></Link>
-                        <Link to='/signUp'><button className='bg-[rgba(61,153,112,1)] px-3 py-1 rounded-md'>Sign Up</button></Link>
+                        <Link to='/signIn'><button className='px-6 py-1 rounded-md border border-white'>Sign In</button></Link>
+                        <Link to='/signUp'><button className='bg-[rgba(61,153,112,1)] px-6 py-1 rounded-md'>Sign Up</button></Link>
                     </div>
                 </div>
             }

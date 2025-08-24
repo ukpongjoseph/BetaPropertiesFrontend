@@ -69,22 +69,22 @@ const LoggedProperties = () => {
         </div>
         {/* properties */}
             {
-                            !isFound && <div className='grid gap-3 grid-cols-1 md:grid-cols-3 py-3'>
-                        {
-                            properties.map((house, index) => {
-                                return <Props key={index} {...house} />
-                            })
-                        }
-                    </div>
+                !isFound && <div className='grid gap-3 grid-cols-1 md:grid-cols-3 py-3'>
+                    {
+                        properties.map((house, index) => {
+                            return <Props key={index} {...house} />
+                    })
+                }
+                </div>
             }
             {
                 isFound && <div className='grid gap-3 grid-cols-1 md:grid-cols-3 py-3'>
-                            {
-                                foundProperties.map((house, index) => {
-                                    return <Props key={index} {...house} />
-                                })
-                            }
-                        </div>
+                    {
+                        foundProperties.map((house, index) => {
+                            return <Props key={index} {...house} />
+                        })
+                    }
+                </div>
             }
         {/* pagination */}
         <div className='flex justify-center gap-2'>

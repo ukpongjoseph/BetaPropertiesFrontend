@@ -37,9 +37,9 @@ input:focus{
   margin: 0 10px;
 }
 .imgOverlay{
-    position: absolute;
-    bottom: 0;
-    height: 50%;
-    backdrop-filter: blur(3px);
-    mask-image: -webkit-linear-gradient(black, rgba(165, 42, 42, 0.7));
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  backdrop-filter: blur(3px);
+  mask-image: -webkit-linear-gradient(black, rgba(165, 42, 42, 0.7));
 }

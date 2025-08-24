@@ -110,7 +110,7 @@ const NavHero = () => {
                         <span onClick={switchLog} className='my-auto'><img src={downCaret} alt="" /></span>
                     </div>
                     {
-                        deskLogOut && <button onClick={exit} className='rounded-md px-3 py-1 bg-white text-[rgba(3,90,51,1)] hover:bg-[rgba(3,90,51,1)] hover:text-white absolute right-0 top-10'>Log Out</button>
+                        deskLogOut && <button onClick={exit} className='rounded-md px-3 py-1 bg-white text-[rgba(3,90,51,1)] hover:bg-[rgba(3,90,51,1)] hover:text-white absolute right-0 top-10'>Sign Out</button>
                     }
                 </div>
                 <button onClick={switchOpen} className='md:hidden text-white'><SquareMenu /></button>
@@ -130,7 +130,7 @@ const NavHero = () => {
                         </div>
                         <div className='my-auto flex flex-col gap-1'>
                             <p className='my-auto'>{user && user.firstName} {user && user.lastName}</p>
-                            <button onClick={exit} className='rounded-md px-3 py-1 bg-white text-[rgba(3,90,51,1)] hover:bg-[rgba(3,90,51,1)] hover:text-white'>Log Out</button>
+                            <button onClick={exit} className='rounded-md px-3 py-1 bg-white text-[rgba(3,90,51,1)] hover:bg-[rgba(3,90,51,1)] hover:text-white'>Sign Out</button>
                         </div>
                     </div>
                 </div>

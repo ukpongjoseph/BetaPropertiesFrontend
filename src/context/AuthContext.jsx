@@ -10,6 +10,7 @@ const AuthContextProvider = ({children}) => {
     const [user, setUser] = useState(JSON.parse(existingUser))
     const [searchData, setSearchData] = useState([])
     const [isFound, setIsfound] = useState(false)
+    const [data, setData] = useState([])
 
     const Login = (usrDetail) => {
         setToken(usrDetail.token)
@@ -29,7 +30,7 @@ const AuthContextProvider = ({children}) => {
         setUser(null)
     }
   return (
-    <AuthContext.Provider value={{token, user, logOut, Login, setSearchData, searchData, setIsfound, isFound}}>
+    <AuthContext.Provider value={{token, user, logOut, Login, setSearchData, searchData, setIsfound, isFound, data, setData}}>
         {children}
     </AuthContext.Provider>
   )

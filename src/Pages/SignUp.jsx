@@ -27,6 +27,10 @@ const SignUp = () => {
   const handleCheck = () => {
     setChecked(checked === true? false : true)
   }
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const handleAccess = () => {
+    setIsSubmitting(isSubmitting?false:true)
+  }
   const handleChange = async (e) => {
     const {name, value} = e.target
     setFormData({...formData, [name] : value})
@@ -117,9 +121,11 @@ const SignUp = () => {
         <div id='auth' className='min-h-[500px] w-[100%] md:w-[50%]'>
           {/* beta logo and text */}
           <div className='flex gap-2 relative top-[30px] left-[20px] w-[60%]'>
-            <div className='h-11 w-11 bg-[rgba(61,153,112,1)] rounded-full flex justify-center items-center'>
-              <span><img src={BetaLogo} alt="" /></span>
-            </div>
+            <Link to='/'>
+              <div className='h-11 w-11 bg-[rgba(61,153,112,1)] rounded-full flex justify-center items-center'>
+                <span><img src={BetaLogo} alt="" /></span>
+              </div>
+            </Link>
             <h1 className='my-auto text-xl text-white'>BetaHouse</h1>
           </div>
         </div>
@@ -170,7 +176,7 @@ const SignUp = () => {
               <label className='text-[12px]' htmlFor="checked">I agree to <span className='text-[rgba(61,153,112,1)]'>Terms of Service</span> and <span className='text-[rgba(61,153,112,1)]'>Privacy Policies</span></label>
             </div>
             {/* button */}
-            <button className='w-[99%] mx-auto text-white bg-[rgba(61,153,112,1)] rounded-md py-1'>Sign up</button>
+            <button onClick={handleAccess} className='w-[99%] mx-auto text-white bg-[rgba(61,153,112,1)] rounded-md py-1'>{isSubmitting?"Signing Up...":"SignUp"}</button>
             {/* or */}
             <div className='flex gap-1 w-[100%] py-1'>
               <hr className='flex-grow my-auto text-gray-200' />

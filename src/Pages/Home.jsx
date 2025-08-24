@@ -1,15 +1,15 @@
 import React from 'react'
 import LoggedNav from '../components/LoggedNav'
-import PropertySlide from '../components/PropertySlide'
 import Footer from '../components/Footer'
 import LoggedProperties from '../components/LoggedProperties'
+import LoggedPropertySlide from '../components/LoggedPropertySlide'
 
 const Home = () => {
   return (
     <div>
       <LoggedNav/>
       <LoggedProperties/>
-      <PropertySlide/>
+      <LoggedPropertySlide/>
       <Footer/>
     </div>
   )

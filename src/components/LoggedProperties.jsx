@@ -8,8 +8,7 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import axios from 'axios'
 
 const LoggedProperties = () => {
-    const {token, isFound, searchData} = useAuthContext()
-    const [data, setData] = useState([])
+    const {token, isFound, searchData, setData, data} = useAuthContext()
     useEffect(()=>{
         const getProperties = async () => {
             const response = await axios.get(

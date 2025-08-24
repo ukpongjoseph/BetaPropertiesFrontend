@@ -28,6 +28,7 @@ const SignIn = () => {
     const {name, value} = e.target
     setFormData({...formData, [name] : value})
     setErrors({...errors, [name] : ""})
+    setIsSubmitting(false)
   }
   const handleSubmit = async (e) => {
     e.preventDefault()

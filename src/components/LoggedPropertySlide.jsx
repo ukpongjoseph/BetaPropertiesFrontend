@@ -140,7 +140,7 @@ const LoggedPropertySlide = () => {
 
         {/* Laptop */}
 
-        <div>
+        <div className='hidden lg:block'>
           <button onClick={handlePrev} className='z-1 absolute left-[0px] bottom-[40%]'><img className='w-[25px]' src={arrLeft} alt="" /></button>
           <button onClick={handleNext} className='z-1 absolute right-[0px] bottom-[40%]'><img className='w-[25px]' src={arrRight} alt="" /></button>
           <div>
@@ -175,7 +175,7 @@ const LoggedPropertySlide = () => {
         </div>
 
         {/* Mobile */}
-        <div>
+        <div className='block md:hidden'>
           <button onClick={handlePrev1} className='z-1 absolute left-[0px] bottom-[40%]'><img className='w-[25px]' src={arrLeft} alt="" /></button>
           <button onClick={handleNext1} className='z-1 absolute right-[0px] bottom-[40%]'><img className='w-[25px]' src={arrRight} alt="" /></button>
           <div>
@@ -209,7 +209,7 @@ const LoggedPropertySlide = () => {
           </div>
         </div>
         {/* Tablet */}
-        <div>
+        <div className='hidden md:block lg:hidden'>
           <button onClick={handlePrev2} className='z-1 absolute left-[0px] bottom-[40%]'><img className='w-[25px]' src={arrLeft} alt="" /></button>
           <button onClick={handleNext2} className='z-1 absolute right-[0px] bottom-[40%]'><img className='w-[25px]' src={arrRight} alt="" /></button>
           <div>

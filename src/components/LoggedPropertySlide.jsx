@@ -185,7 +185,7 @@ const LoggedPropertySlide = () => {
                   return (
                     <div key={index} className="slider-container hidden lg:block">
                       <div>
-                        <div className='imgOverlay w-[5%]'></div>
+                        <div className='imgOverlay w-[90%]'></div>
                         <span><img className='w-[100%] h-[300px]' src={property.propertyImage} alt="" /></span>
                         <div className='absolute bottom-[20px] px-3 z-1 text-white text-sm flex flex-col gap-2'>
                           <h1 className='font-bold text-lg'>{property.propertyName}</h1>
@@ -219,7 +219,7 @@ const LoggedPropertySlide = () => {
                   return (
                     <div key={index} className="slider-container hidden lg:block">
                       <div>
-                        <div className='imgOverlay w-[5%]'></div>
+                        <div className='imgOverlay w-[50%]'></div>
                         <span><img className='w-[100%] h-[300px]' src={property.propertyImage} alt="" /></span>
                         <div className='absolute bottom-[20px] px-3 z-1 text-white text-sm flex flex-col gap-2'>
                           <h1 className='font-bold text-lg'>{property.propertyName}</h1>
